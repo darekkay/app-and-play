@@ -1,0 +1,47 @@
+.index .headline {
+  text-align: center;
+}
+
+.index .game-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index .nav-item {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 3px;
+  max-width: 250px;
+  width: 100%;
+  margin: 1rem;
+}
+
+.index .nav-item a {
+  display: block;
+  width: 100%;
+  padding: 2.5rem 3.5rem;
+  text-align: center;
+  color: inherit;
+}
+
+.index .nav-item:hover {
+  background: #006aff;
+  color: white;
+}
+
+.index .nav-item a:hover {
+  text-decoration: none;
+}
+
+/* Game Colors */
+
+.index .nav-onitama {
+  background-color: #ebd695;
+  color: black;
+}
+
+.index .nav-themind {
+  background-color: #1d3d6b;
+  color: white;
+}
