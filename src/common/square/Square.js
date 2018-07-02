@@ -7,11 +7,7 @@ import "./Square.css";
 class Square extends PureComponent {
   render() {
     const { className } = this.props;
-    return (
-      <div className={cl("square", className)}>
-        {this.props.children}
-      </div>
-    );
+    return <div className={cl("square", className)}>{this.props.children}</div>;
   }
 }
 

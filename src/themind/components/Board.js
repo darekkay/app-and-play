@@ -88,9 +88,7 @@ class Board extends React.Component {
         <div className="marker-row">
           <div className="left" />
           <div className="middle controls">
-            <Button onClick={this.onUndo}>
-              Undo
-            </Button>
+            <Button onClick={this.onUndo}>Undo</Button>
             <Button type="secondary" onClick={this.onNewGame}>
               New Game
             </Button>
