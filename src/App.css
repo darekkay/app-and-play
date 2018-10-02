@@ -1,5 +1,6 @@
 .index .headline {
   text-align: center;
+  border-bottom: none;
 }
 
 .index .game-selection {

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./base.css";
+import "./base.min.css";
 import "./common/utils.css";
 // import "./common/grid.css";
 
