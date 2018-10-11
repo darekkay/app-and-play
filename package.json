@@ -1,5 +1,6 @@
 {
   "name": "app-and-play",
+  "description": "Board games assistant",
   "version": "1.0.0",
   "dependencies": {
     "boardgame.io": "0.23.3",

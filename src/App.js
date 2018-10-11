@@ -7,8 +7,13 @@ import "./App.css";
 const Index = () => (
   <div className="index">
     <h1 className="headline">App and Play</h1>
+    <p>
+      This is a collection of apps used to complement your board games. Those
+      are <strong>not</strong> standalone games and you will need to buy the
+      original game to be able to play it.
+    </p>
     <nav className="game-selection">
-      {routes.map((route, _idx) => (
+      {routes.map(route => (
         <div
           key={route.path}
           className={`nav-item nav-${route.path.substring(1)}`}
@@ -25,7 +30,7 @@ const App = () => (
     <main>
       <Route exact path="/" component={Index} />
       <section>
-        {routes.map((route, idx) => (
+        {routes.map(route => (
           <Route
             key={route.path}
             exact
