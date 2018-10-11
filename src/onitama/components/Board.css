@@ -33,10 +33,6 @@
 }
 
 .onitama .controls {
-
-}
-
-.onitama .controls {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
