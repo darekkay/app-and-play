@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
 
+import { boardGamesIO } from "common/propTypes";
+
 import Card from "./Card";
 import "./Board.css";
 
@@ -61,8 +63,13 @@ class Board extends React.Component {
 }
 
 Board.propTypes = {
-  // TODO: boardgame.io PropTypes
-  G: PropTypes.any.isRequired
+  ...boardGamesIO,
+  G: PropTypes.shape({
+    cards: PropTypes.array.isRequired
+  }).isRequired,
+  moves: PropTypes.shape({
+    swapCard: PropTypes.func.isRequired
+  }).isRequired
 };
 
 export default Board;

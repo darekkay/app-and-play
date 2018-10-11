@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
 import cn from "classnames";
 import _ from "lodash";
 
@@ -28,5 +29,18 @@ class Card extends PureComponent {
     );
   }
 }
+
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  moves: PropTypes.arrayOf(PropTypes.number).isRequired,
+  alignment: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  onClick: PropTypes.func
+};
+
+Card.defaultProps = {
+  className: undefined,
+  onClick: _.noop
+};
 
 export default Card;

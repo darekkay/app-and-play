@@ -1,7 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import cn from "classnames";
 import _ from "lodash";
 
+import { boardGamesIO } from "common/propTypes";
 import Icon from "common/icon/Icon";
 import Square from "common/square/Square";
 import Button from "common/button/Button";
@@ -98,5 +100,25 @@ class Board extends React.Component {
     );
   }
 }
+
+Board.propTypes = {
+  ...boardGamesIO,
+  G: PropTypes.shape({
+    levels: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        bonus: PropTypes.string
+      })
+    ).isRequired,
+    level: PropTypes.number.isRequired,
+    lifes: PropTypes.number.isRequired,
+    stars: PropTypes.number.isRequired
+  }).isRequired,
+  moves: PropTypes.shape({
+    decLifes: PropTypes.func.isRequired,
+    decStars: PropTypes.func.isRequired,
+    incLevel: PropTypes.func.isRequired
+  }).isRequired
+};
 
 export default Board;
