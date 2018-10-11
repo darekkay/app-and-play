@@ -1,6 +1,6 @@
 {
   "name": "app-and-play",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "dependencies": {
     "boardgame.io": "0.23.3",
     "classnames": "2.2.6",
@@ -24,13 +24,16 @@
     "prettier": "1.13.5"
   },
   "homepage": "https://darekkay.com/app-and-play/",
+  "main": "src/index.js",
   "private": true,
   "scripts": {
     "build": "react-scripts build",
+    "ci": "npm run lint:check && npm run test",
     "eject": "react-scripts eject",
     "format": "prettier --write -- \"{src,public}/**/*.{js,jsx,json,css}\"",
-    "lint": "eslint --fix \"src/**/*.js\" \"src/**/*.jsx\"",
+    "lint:check": "eslint src/**/*.js",
+    "lint:fix": "eslint --fix src/**/*.js",
     "start": "react-scripts start",
-    "test": "react-scripts test --env=jsdom"
+    "test": "react-scripts test --env=jsdom --modulePaths=src"
   }
 }
