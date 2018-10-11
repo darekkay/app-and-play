@@ -22,7 +22,7 @@ const Onitama = Game({
 const App = Client({
   game: Onitama,
   board: Board,
-  numPlayers: 1,
+  numPlayers: 2,
   debug: false
 });
 
