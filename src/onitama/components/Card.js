@@ -14,10 +14,11 @@ class Card extends PureComponent {
     return (
       <div className={cn("card", className)} onClick={onClick}>
         <div className="board">
+          {/* TODO: reuse Square component? */}
           {squares.map((square, index) => (
             <div
               key={index}
-              className={cn({
+              className={cn("field", {
                 middle: index === MIDDLE,
                 [`move-${alignment}`]: moves.includes(index)
               })}
@@ -33,7 +34,7 @@ class Card extends PureComponent {
 Card.propTypes = {
   name: PropTypes.string.isRequired,
   moves: PropTypes.arrayOf(PropTypes.number).isRequired,
-  alignment: PropTypes.string.isRequired,
+  alignment: PropTypes.oneOf(["left", "right", "center"]).isRequired,
   className: PropTypes.string,
   onClick: PropTypes.func
 };

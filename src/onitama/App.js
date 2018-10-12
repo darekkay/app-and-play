@@ -5,7 +5,7 @@ import _ from "lodash";
 import Board from "./components/Board";
 import deck from "./deck";
 
-const Onitama = Game({
+export const Onitama = Game({
   setup: () => ({ cards: _.take(_.shuffle(deck), 5) }),
 
   moves: {

@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 import { Client } from "boardgame.io/react";
 import { Game } from "boardgame.io/core";
 

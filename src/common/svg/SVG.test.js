@@ -4,14 +4,18 @@ import { shallow } from "enzyme";
 import SVG from "./SVG";
 
 describe("<SVG />", () => {
-  let wrapper = shallow(
-    <SVG width={20} height={30}>
-      <path />
-    </SVG>
-  );
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <SVG width={20} height={30}>
+        <path />
+      </SVG>
+    );
+  });
 
   it("renders without error", () => {
-    expect(wrapper.find("svg").exists()).toBe(true);
+    expect(wrapper.find("svg")).toHaveLength(1);
   });
 
   it("sets the viewBox width and height", () => {

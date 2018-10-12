@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
 
-import { boardGamesIO } from "common/propTypes";
+import { boardGamesIO } from "common/util/propTypes";
 
 import Card from "./Card";
 import "./Board.css";
@@ -23,18 +23,18 @@ class Board extends React.Component {
     }
   };
 
-  onUndo = () => {
-    this.props.undo();
-  };
-
-  onNewGame = () => {
-    this.props.reset();
-  };
+  // onUndo = () => {
+  //   this.props.undo();
+  // };
+  //
+  // onNewGame = () => {
+  //   this.props.reset();
+  // };
 
   render() {
     const { cards } = this.props.G;
     return (
-      <div className="onitama">
+      <div className="board onitama">
         <div className="shelf rotate">
           <Card {...cards[0]} onClick={() => this.onCardClick(0)} />
           <Card {...cards[1]} onClick={() => this.onCardClick(1)} />

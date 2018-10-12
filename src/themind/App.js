@@ -13,7 +13,7 @@ const decrement = (G, value, minValue) =>
 const bonus = level =>
   level < levels.length - 1 ? levels[level - 1].bonus : undefined;
 
-const TheMind = Game({
+export const TheMind = Game({
   setup: () => ({ levels, level: 1, lifes: 2, stars: 1 }),
 
   moves: {

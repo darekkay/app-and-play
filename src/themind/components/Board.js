@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cn from "classnames";
 import _ from "lodash";
 
-import { boardGamesIO } from "common/propTypes";
+import { boardGamesIO } from "common/util/propTypes";
 import Icon from "common/icon/Icon";
 import Square from "common/square/Square";
 import Button from "common/button/Button";
@@ -23,10 +23,10 @@ class Board extends React.Component {
   render() {
     const { levels, level, lifes, stars } = this.props.G;
     return (
-      <div className="themind">
+      <div className="board themind">
         <div className="marker-row">
           <div className="left">
-            <Button onClick={() => this.incLevel()}>
+            <Button name="incLevel" onClick={() => this.incLevel()}>
               <Icon name="plus" />
             </Button>
           </div>
@@ -53,7 +53,11 @@ class Board extends React.Component {
 
         <div className="marker-row">
           <div className="left">
-            <Button type="secondary" onClick={() => this.decLifes()}>
+            <Button
+              type="secondary"
+              name="decLifes"
+              onClick={() => this.decLifes()}
+            >
               <Icon name="minus" />
             </Button>
           </div>
@@ -71,7 +75,11 @@ class Board extends React.Component {
 
         <div className="marker-row">
           <div className="left">
-            <Button type="secondary" onClick={() => this.decStars()}>
+            <Button
+              type="secondary"
+              name="decStars"
+              onClick={() => this.decStars()}
+            >
               <Icon name="minus" />
             </Button>
           </div>
@@ -90,8 +98,10 @@ class Board extends React.Component {
         <div className="marker-row">
           <div className="left" />
           <div className="middle controls">
-            <Button onClick={this.onUndo}>Undo</Button>
-            <Button type="secondary" onClick={this.onNewGame}>
+            <Button name="undo" onClick={this.onUndo}>
+              Undo
+            </Button>
+            <Button name="new-game" type="secondary" onClick={this.onNewGame}>
               New Game
             </Button>
           </div>

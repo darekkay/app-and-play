@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 /* boardgames.io prop types */
 export const boardGamesIO = {
   ctx: PropTypes.shape({
-    turn: PropTypes.number,
+    turn: PropTypes.number.isRequired,
     currentPlayer: PropTypes.string.isRequired,
     numPlayers: PropTypes.number.isRequired
   }).isRequired,
