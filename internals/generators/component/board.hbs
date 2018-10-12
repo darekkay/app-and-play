@@ -1,0 +1,29 @@
+import React from "react";
+import PropTypes from "prop-types";
+import cn from "classnames";
+
+import { boardGamesIO } from "common/util/propTypes";
+
+import "./Board.css";
+
+class Board extends React.Component {
+  render() {
+    const {} = this.props.G;
+    return (
+      <div className="board {{ lowerCase name }}">
+      </div>
+    );
+  }
+}
+
+Board.propTypes = {
+  ...boardGamesIO,
+  G: PropTypes.shape({
+
+  }).isRequired,
+  moves: PropTypes.shape({
+
+  }).isRequired
+};
+
+export default Board;

@@ -1,0 +1,34 @@
+import React from "react";
+import { shallow } from "enzyme";
+import _ from "lodash";
+
+import Board from "./Board";
+
+describe("<Board>", () => {
+  let wrapper;
+
+  const ctx = ({ turn = 1, currentPlayer = "0", numPlayers = 2 }) => ({
+    ctx: {
+      turn,
+      currentPlayer,
+      numPlayers
+    }
+  });
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <Board
+        G=\{{}}
+        moves=\{{}}
+        ctx=\{{ turn: 1, currentPlayer: "0", numPlayers: 2 }}
+        undo={jest.fn()}
+        reset={jest.fn()}
+        events=\{{ endTurn: _.noop }}
+      />
+    );
+  });
+
+  it("renders without error", () => {
+    expect(wrapper.find(".board")).toHaveLength(1);
+  });
+});

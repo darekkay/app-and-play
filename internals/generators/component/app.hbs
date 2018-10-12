@@ -1,16 +1,18 @@
-/* istanbul ignore file */
-
 import { Client } from "boardgame.io/react";
 import { Game } from "boardgame.io/core";
 
 import Board from "./components/Board";
 
-const Template = Game({
+export const {{ properCase name }} = Game({
   setup: () => ({}),
-
   moves: {}
 });
 
-const App = Client({ game: Template, board: Board, debug: false });
+const App = Client({
+  game: {{ properCase name }},
+  board: Board,
+  numPlayers: 2,
+  debug: false
+});
 
 export default App;

@@ -27,6 +27,7 @@
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-react": "7.10.0",
+    "plop": "2.1.0",
     "prettier": "1.14.3"
   },
   "homepage": "https://darekkay.com/app-and-play/",
@@ -46,6 +47,7 @@
     "build": "react-scripts build",
     "ci": "npm run lint:check && npm run test",
     "format": "prettier --write -- \"{src,public}/**/*.{js,jsx,json,css}\"",
+    "generate": "plop --plopfile internals/generators/index.js",
     "lint:check": "eslint src/**/*.js",
     "lint:fix": "eslint --fix src/**/*.js",
     "start": "react-scripts start",

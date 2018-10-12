@@ -1,0 +1,18 @@
+import { Client } from "boardgame.io/client";
+
+import { {{ properCase name }} } from "./App";
+
+describe("{{ properCase name }}", () => {
+  let client;
+
+  const getState = prop => client.store.getState().G[prop];
+
+  beforeEach(() => {
+    client = Client({
+      game: {{ properCase name }},
+      numPlayers: 2
+    });
+  });
+
+  it("", () => {});
+});
