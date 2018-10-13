@@ -4,3 +4,5 @@ export const click = (wrapper, name) =>
     .find(`[name='${name}']`)
     .props()
     .onClick();
+
+export const getState = (client, prop) => client.store.getState().G[prop];
