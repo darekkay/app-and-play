@@ -39,7 +39,7 @@ describe("<Board>", () => {
   });
 
   it("renders without error", () => {
-    expect(wrapper.find(".board").exists()).toBe(true);
+    expect(wrapper.find(".board")).toHaveLength(1);
   });
 
   // it("undoes a move", () => {

@@ -1,0 +1,25 @@
+import React from "react";
+import PropTypes from "prop-types";
+import cn from "classnames";
+
+import "./{{ properCase name }}.css";
+
+const {{ properCase name }} = ({ className, ...rest }) => (
+  <div
+    className={cn(
+      "{{ lowerCase name }}",
+      className
+    )}
+    {...rest}
+  ></div>
+);
+
+{{ properCase name }}.propTypes = {
+  className: PropTypes.string,
+};
+
+{{ properCase name }}.defaultProps = {
+  className: undefined
+};
+
+export default {{ properCase name }};

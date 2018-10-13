@@ -7,35 +7,56 @@ module.exports = plop => {
     }
   ];
 
-  const componentActions = [
+  const gameActions = [
     {
       type: "add",
       path: "../../src/{{lowerCase name}}/App.js",
-      templateFile: `./component/app.hbs`,
+      templateFile: `./game/app.hbs`,
       abortOnFail: false
     },
     {
       type: "add",
       path: "../../src/{{lowerCase name}}/App.test.js",
-      templateFile: `./component/app.test.hbs`,
+      templateFile: `./game/app.test.hbs`,
       abortOnFail: false
     },
     {
       type: "add",
       path: "../../src/{{lowerCase name}}/components/Board.js",
-      templateFile: `./component/board.hbs`,
+      templateFile: `./game/board.hbs`,
       abortOnFail: false
     },
     {
       type: "add",
       path: "../../src/{{lowerCase name}}/components/Board.test.js",
-      templateFile: `./component/board.test.hbs`,
+      templateFile: `./game/board.test.hbs`,
       abortOnFail: false
     },
     {
       type: "add",
       path: "../../src/{{lowerCase name}}/components/Board.css",
-      templateFile: `./component/board.css.hbs`,
+      templateFile: `./game/board.css.hbs`,
+      abortOnFail: false
+    }
+  ];
+
+  const commonActions = [
+    {
+      type: "add",
+      path: "../../src/common/{{lowerCase name}}/{{properCase name}}.js",
+      templateFile: `./common/component.hbs`,
+      abortOnFail: false
+    },
+    {
+      type: "add",
+      path: "../../src/common/{{lowerCase name}}/{{properCase name}}.test.js",
+      templateFile: `./common/component.test.hbs`,
+      abortOnFail: false
+    },
+    {
+      type: "add",
+      path: "../../src/common/{{lowerCase name}}/{{properCase name}}.css",
+      templateFile: `./common/component.css.hbs`,
       abortOnFail: false
     }
   ];
@@ -43,6 +64,12 @@ module.exports = plop => {
   plop.setGenerator("Game", {
     description: "Game app",
     prompts: componentPrompts,
-    actions: componentActions
+    actions: gameActions
+  });
+
+  plop.setGenerator("Common", {
+    description: "Common component",
+    prompts: componentPrompts,
+    actions: commonActions
   });
 };

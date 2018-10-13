@@ -6,7 +6,7 @@ import _ from "lodash";
 import "./Card.css";
 
 const MIDDLE = 12;
-const squares = _.range(25);
+const fields = _.range(25);
 
 class Card extends PureComponent {
   render() {
@@ -14,8 +14,7 @@ class Card extends PureComponent {
     return (
       <div className={cn("card", className)} onClick={onClick}>
         <div className="board">
-          {/* TODO: reuse Square component? */}
-          {squares.map((square, index) => (
+          {fields.map((field, index) => (
             <div
               key={index}
               className={cn("field", {
