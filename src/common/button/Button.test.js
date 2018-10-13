@@ -22,9 +22,9 @@ describe("<Button />", () => {
     expect(wrapper.find(".btn-secondary")).toHaveLength(1);
 
     wrapper.setProps({ type: "primary", outline: true });
-    expect(wrapper.find(".btn-primary-outline.btn-outline")).toHaveLength(1);
+    expect(wrapper.find(".btn-primary-outline")).toHaveLength(1);
 
     wrapper.setProps({ type: "secondary", outline: true });
-    expect(wrapper.find(".btn-secondary-outline.btn-outline")).toHaveLength(1);
+    expect(wrapper.find(".btn-secondary-outline")).toHaveLength(1);
   });
 });

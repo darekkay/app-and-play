@@ -19,11 +19,11 @@ describe("<Icon />", () => {
     expect(throwFn).toThrow();
   });
 
-  it("renders all supported icons", () => {
+  it("renders supported icons", () => {
     const supportedIcons = ["heart", "minus", "plus", "star"];
     supportedIcons.forEach(name => {
       wrapper.setProps({ name });
-      expect(wrapper.find("SVG")).toHaveLength(1);
+      expect(wrapper.find(".icon")).toHaveLength(1);
     });
   });
 });

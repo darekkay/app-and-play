@@ -5,7 +5,7 @@ import cn from "classnames";
 import { boardGamesIO } from "common/util/propTypes";
 
 import Card from "./Card";
-import "./Board.css";
+import "./Board.scss";
 
 class Board extends React.Component {
   isValid = id => {

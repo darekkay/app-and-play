@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cn from "classnames";
 import _ from "lodash";
 
-import "./Card.css";
+import "./Card.scss";
 
 const MIDDLE = 12;
 const fields = _.range(25);

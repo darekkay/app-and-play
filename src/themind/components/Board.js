@@ -8,7 +8,7 @@ import Icon from "common/icon/Icon";
 import Square from "common/square/Square";
 import Button from "common/button/Button";
 
-import "./Board.css";
+import "./Board.scss";
 
 class Board extends React.Component {
   incLevel = () => {

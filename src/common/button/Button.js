@@ -2,15 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
 
-import "./Button.css";
+import "./Button.scss";
 
 const Button = ({ children, className, type, outline, ...rest }) => (
   <button
     className={cn(
       "btn",
       {
-        [`btn-${type}${outline ? "-outline" : ""}`]: type,
-        "btn-outline": outline
+        [`btn-${type}${outline ? "-outline" : ""}`]: type
       },
       className
     )}

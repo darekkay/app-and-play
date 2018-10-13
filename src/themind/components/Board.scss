@@ -1,0 +1,111 @@
+.themind {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  height: 100vh;
+  margin: 0 auto;
+
+  .marker-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .left,
+  .right {
+    width: 100px;
+  }
+
+  .middle {
+    width: 100%;
+  }
+
+  .btn {
+    margin: 2rem;
+  }
+
+  .level-fill {
+    background-color: #006aff;
+    color: #fff;
+  }
+
+  .square {
+    margin: 0.5rem;
+    width: 7vh;
+    height: 7vh;
+  }
+
+  .player-count {
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0;
+
+    font-size: 1.2rem;
+    color: #006aff;
+  }
+
+  .level-fill .player-count {
+    color: #fff;
+  }
+
+  .levels .square .icon {
+    width: 25%;
+    height: 25%;
+  }
+
+  .lifes .square .icon,
+  .stars .square .icon {
+    width: 50%;
+    height: 50%;
+  }
+
+  .icon-heart svg {
+    fill: #e03131;
+  }
+
+  .icon-star svg {
+    fill: #fcc419;
+  }
+
+  .icon-disabled svg {
+    fill: #eee;
+  }
+
+  .icon-heart[disabled] svg,
+  .icon-star[disabled] svg {
+    fill: #eee;
+  }
+
+  .levels,
+  .lifes,
+  .stars {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .levels .square {
+    border-color: #006aff;
+  }
+
+  .lifes .square {
+    border-color: red;
+  }
+
+  .stars .square {
+    border-color: darkgrey;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}

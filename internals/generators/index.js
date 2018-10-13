@@ -34,8 +34,8 @@ module.exports = plop => {
     },
     {
       type: "add",
-      path: "../../src/{{lowerCase name}}/components/Board.css",
-      templateFile: `./game/board.css.hbs`,
+      path: "../../src/{{lowerCase name}}/components/Board.scss",
+      templateFile: `./game/board.scss.hbs`,
       abortOnFail: false
     }
   ];
@@ -55,8 +55,8 @@ module.exports = plop => {
     },
     {
       type: "add",
-      path: "../../src/common/{{lowerCase name}}/{{properCase name}}.css",
-      templateFile: `./common/component.css.hbs`,
+      path: "../../src/common/{{lowerCase name}}/{{properCase name}}.scss",
+      templateFile: `./common/component.scss.hbs`,
       abortOnFail: false
     }
   ];
