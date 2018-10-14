@@ -31,8 +31,8 @@ describe("<Board>", () => {
           swapCard: jest.fn()
         }}
         ctx={{ turn: 1, currentPlayer: "0", numPlayers: 2 }}
-        undo={jest.fn()}
-        reset={jest.fn()}
+        undo={_.noop}
+        reset={_.noop}
         events={{ endTurn: _.noop }}
       />
     );
@@ -41,18 +41,6 @@ describe("<Board>", () => {
   it("renders without error", () => {
     expect(wrapper.find(".board")).toHaveLength(1);
   });
-
-  // it("undoes a move", () => {
-  //   expect(wrapper.instance().props.undo).not.toHaveBeenCalled();
-  //   click(wrapper, "undo");
-  //   expect(wrapper.instance().props.undo).toHaveBeenCalled();
-  // });
-  //
-  // it("restarts the game", () => {
-  //   expect(wrapper.instance().props.reset).not.toHaveBeenCalled();
-  //   click(wrapper, "new-game");
-  //   expect(wrapper.instance().props.reset).toHaveBeenCalled();
-  // });
 
   it("swaps card on click", () => {
     expect(wrapper.instance().props.moves.swapCard).not.toHaveBeenCalled();

@@ -6,7 +6,10 @@ import _ from "lodash";
 import { boardGamesIO } from "common/util/propTypes";
 import Icon from "common/icon/Icon";
 import Square from "common/square/Square";
+import Menu from "common/menu/Menu";
 import Button from "common/button/Button";
+import UndoButton from "common/button/UndoButton";
+import RestartButton from "common/button/RestartButton";
 
 import "./Board.scss";
 
@@ -16,9 +19,6 @@ class Board extends React.Component {
   };
   decLifes = () => this.props.moves.decLifes();
   decStars = () => this.props.moves.decStars();
-
-  onNewGame = () => this.props.reset();
-  onUndo = () => this.props.undo();
 
   render() {
     const { levels, level, lifes, stars } = this.props.G;
@@ -95,17 +95,11 @@ class Board extends React.Component {
           </div>
         </div>
 
-        <div className="marker-row">
-          <div className="left" />
-          <div className="middle controls">
-            <Button name="undo" onClick={this.onUndo}>
-              Undo
-            </Button>
-            <Button name="new-game" type="secondary" onClick={this.onNewGame}>
-              New Game
-            </Button>
-          </div>
-        </div>
+        <Menu>
+          <UndoButton {...this.props} />
+          <div className="separator" />
+          <RestartButton {...this.props} />
+        </Menu>
       </div>
     );
   }
