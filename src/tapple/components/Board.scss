@@ -1,0 +1,23 @@
+.tapple {
+  .letters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .letter {
+    // TODO: orientation media query
+    //width: 12vh;
+    //height: 12vh;
+    width: 12vw;
+    height: 12vw;
+    margin: 1rem;
+    font-size: 5vw;
+    //border-color: #006aff;
+  }
+
+  .category {
+    font-weight: bold;
+    max-width: 20vw;
+    width: 100%;
+  }
+}

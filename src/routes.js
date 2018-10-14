@@ -1,18 +1,22 @@
 import Onitama from "./onitama/App";
 import TheMind from "./themind/App";
+import Tapple from "./tapple/App";
 
 const routes = [
   {
     path: "/onitama",
     text: "Onitama",
-    color: "#ebd695",
     component: Onitama
   },
   {
     path: "/themind",
     text: "The Mind",
-    color: "#1d3d6b",
     component: TheMind
+  },
+  {
+    path: "/tapple",
+    text: "Tapple",
+    component: Tapple
   }
 ];
 

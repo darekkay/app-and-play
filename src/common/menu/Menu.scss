@@ -5,6 +5,7 @@ $menu-border-padding: 2rem;
 .menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &.horizontal {
     flex-direction: row;
