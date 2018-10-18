@@ -9,8 +9,8 @@ const Index = () => (
     <h1 className="headline">App and Play</h1>
     <p>
       This is a collection of apps used to complement your board games. Those
-      are <strong>not</strong> standalone games and you will need to buy the
-      original game to be able to play it.
+      are mostly <strong>not</strong> standalone games and you will need to buy
+      the original game to be able to play it.
     </p>
     <nav className="game-selection">
       {routes.map(route => (
