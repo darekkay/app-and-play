@@ -2,17 +2,15 @@
   .letters {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .letter {
-    // TODO: orientation media query
-    //width: 12vh;
-    //height: 12vh;
-    width: 12vw;
-    height: 12vw;
+    width: 8vmax;
+    height: 8vmax;
+
     margin: 1rem;
-    font-size: 5vw;
-    //border-color: #005aff;
+    font-size: 5vmax;
   }
 
   .category {
