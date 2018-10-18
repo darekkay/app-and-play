@@ -17,6 +17,12 @@ describe("<Board>", () => {
     expect(wrapper.find(".card")).toHaveLength(1);
   });
 
+  it("renders a clickable card", () => {
+    expect(wrapper.find(".clickable")).toHaveLength(0);
+    wrapper.setProps({ clickable: true });
+    expect(wrapper.find(".clickable")).toHaveLength(1);
+  });
+
   it("contains 25 squares", () => {
     expect(wrapper.find(".field")).toHaveLength(25);
   });

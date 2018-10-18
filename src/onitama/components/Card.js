@@ -10,9 +10,16 @@ const fields = _.range(25);
 
 class Card extends PureComponent {
   render() {
-    const { name, moves, alignment, onClick, className } = this.props;
+    const {
+      name,
+      moves,
+      alignment,
+      clickable,
+      onClick,
+      className
+    } = this.props;
     return (
-      <div className={cn("card", className)} onClick={onClick}>
+      <div className={cn("card", { clickable }, className)} onClick={onClick}>
         <div className="board">
           {fields.map((field, index) => (
             <div
@@ -35,11 +42,13 @@ Card.propTypes = {
   moves: PropTypes.arrayOf(PropTypes.number).isRequired,
   alignment: PropTypes.oneOf(["left", "right", "center"]).isRequired,
   className: PropTypes.string,
+  clickable: PropTypes.bool,
   onClick: PropTypes.func
 };
 
 Card.defaultProps = {
   className: undefined,
+  clickable: false,
   onClick: _.noop
 };
 

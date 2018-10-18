@@ -9,6 +9,10 @@
   border: 1px solid #222;
   border-radius: 5px;
 
+  &.clickable {
+    background-color: #fbfbde;
+  }
+
   .name {
     margin-top: 0.5rem;
     text-align: center;
