@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import _ from "lodash";
 import cl from "classnames";
@@ -7,7 +7,11 @@ import svgs from "./svgs";
 
 import "./Icon.scss";
 
-class Icon extends PureComponent {
+class Icon extends React.Component {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     const { name, className, position } = this.props;
     return (

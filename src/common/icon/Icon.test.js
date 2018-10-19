@@ -4,26 +4,21 @@ import { shallow } from "enzyme";
 import Icon from "./Icon";
 
 describe("<Icon />", () => {
-  let wrapper;
-
-  beforeEach(() => {
-    wrapper = shallow(<Icon name="heart" />);
-  });
-
   it("renders without error", () => {
+    const wrapper = shallow(<Icon name="heart" />);
     expect(wrapper.find(".icon")).toHaveLength(1);
   });
 
   it("does not render unknown icons", () => {
-    const throwFn = () => wrapper.setProps({ name: "c01c4b" });
+    const throwFn = () => shallow(<Icon name="c01c4b" />);
     expect(throwFn).toThrow();
   });
 
-  it("renders supported icons", () => {
-    const supportedIcons = ["heart", "minus", "plus", "star"];
-    supportedIcons.forEach(name => {
-      wrapper.setProps({ name });
-      expect(wrapper.find(".icon")).toHaveLength(1);
-    });
+  it("never rerenders", () => {
+    const wrapper = shallow(<Icon name="heart" />);
+    const shouldUpdate = wrapper
+      .instance()
+      .shouldComponentUpdate({ name: "star" });
+    expect(shouldUpdate).toBe(false);
   });
 });
