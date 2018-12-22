@@ -11,15 +11,18 @@ const prepareLetters = _.map(
   number => String.fromCharCode(number)
 );
 
+const setup = () => ({
+  letters: prepareLetters,
+  pressedLetters: [],
+  turnDuration: 10,
+  /* TODO: fix randomized setup for all games */
+  category: _.first(_.shuffle(categories)),
+  timerRestart: false,
+  timerActive: false
+});
+
 export const Tapple = Game({
-  setup: () => ({
-    letters: prepareLetters,
-    pressedLetters: [],
-    turnDuration: 10,
-    /* TODO: fix randomized setup for all games */
-    category: _.first(_.shuffle(categories)),
-    timerActive: false
-  }),
+  setup: setup,
   moves: {
     pressLetter(G, ctx, letter) {
       if (G.pressedLetters.includes(letter)) {
@@ -39,6 +42,10 @@ export const Tapple = Game({
 
     setTimerRestart(G, ctx, timerRestart) {
       return { ...G, timerRestart };
+    },
+
+    restart() {
+      return setup();
     }
   }
 });

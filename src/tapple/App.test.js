@@ -14,6 +14,13 @@ describe("Tapple", () => {
     });
   });
 
+  it("restarts the game", () => {
+    client.moves.pressLetter("A");
+    client.moves.pressLetter("B");
+    client.moves.restart();
+    expect(getState(client, "pressedLetters")).toHaveLength(0);
+  });
+
   it("sets pressed letters", () => {
     expect(getState(client, "pressedLetters")).toHaveLength(0);
     client.moves.pressLetter("A");

@@ -9,7 +9,8 @@ class RestartButton extends React.Component {
     return false;
   }
 
-  onRestart = () => this.props.reset();
+  onRestart = () =>
+    this.props.moves.restart ? this.props.moves.restart() : this.props.reset();
 
   render() {
     return (
@@ -27,7 +28,8 @@ class RestartButton extends React.Component {
 }
 
 RestartButton.propTypes = {
-  reset: PropTypes.func.isRequired
+  reset: PropTypes.func.isRequired,
+  moves: PropTypes.object.isRequired
 };
 
 export default RestartButton;
