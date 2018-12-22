@@ -7,11 +7,7 @@ import svgs from "./svgs";
 
 import "./Icon.scss";
 
-class Icon extends React.Component {
-  shouldComponentUpdate() {
-    return false;
-  }
-
+class Icon extends React.PureComponent {
   render() {
     const { name, className, position } = this.props;
     return (

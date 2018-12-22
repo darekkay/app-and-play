@@ -13,12 +13,4 @@ describe("<Icon />", () => {
     const throwFn = () => shallow(<Icon name="c01c4b" />);
     expect(throwFn).toThrow();
   });
-
-  it("never rerenders", () => {
-    const wrapper = shallow(<Icon name="heart" />);
-    const shouldUpdate = wrapper
-      .instance()
-      .shouldComponentUpdate({ name: "star" });
-    expect(shouldUpdate).toBe(false);
-  });
 });

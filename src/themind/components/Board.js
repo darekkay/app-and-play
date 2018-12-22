@@ -26,7 +26,7 @@ class Board extends React.Component {
       <div className="board themind">
         <div className="marker-row">
           <div className="left">
-            <Button name="incLevel" onClick={() => this.incLevel()}>
+            <Button name="incLevel" onClick={this.incLevel}>
               <Icon name="plus" />
             </Button>
           </div>
@@ -53,11 +53,7 @@ class Board extends React.Component {
 
         <div className="marker-row">
           <div className="left">
-            <Button
-              type="secondary"
-              name="decLifes"
-              onClick={() => this.decLifes()}
-            >
+            <Button type="secondary" name="decLifes" onClick={this.decLifes}>
               <Icon name="minus" />
             </Button>
           </div>
@@ -75,11 +71,7 @@ class Board extends React.Component {
 
         <div className="marker-row">
           <div className="left">
-            <Button
-              type="secondary"
-              name="decStars"
-              onClick={() => this.decStars()}
-            >
+            <Button type="secondary" name="decStars" onClick={this.decStars}>
               <Icon name="minus" />
             </Button>
           </div>
