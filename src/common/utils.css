@@ -4,6 +4,20 @@
   bottom: 0;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/* Flex */
+
 .d-flex {
   display: flex;
+}
+
+.justify-content-around {
+  justify-content: space-around;
 }

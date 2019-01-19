@@ -1,5 +1,11 @@
 import React from "react";
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Route,
+  Link as RouteLink
+} from "react-router-dom";
+
+import Link from "common/link/Link";
 
 import routes from "./routes";
 import "./App.scss";
@@ -12,16 +18,31 @@ const Index = () => (
       are mostly <strong>not</strong> standalone games and you will need to buy
       the original game to be able to play it.
     </p>
+    <p className="version text-center">
+      <strong>Version:</strong> {process.env.REACT_APP_VERSION}
+    </p>
     <nav className="game-selection">
       {routes.map(route => (
         <div
           key={route.path}
           className={`nav-item nav-${route.path.substring(1)}`}
         >
-          <Link to={route.path}>{route.text}</Link>
+          <RouteLink to={route.path}>{route.text}</RouteLink>
         </div>
       ))}
     </nav>
+    <footer className="d-flex justify-content-around">
+      <div className="text-center">
+        <span>Handmade with &hearts; by </span>
+        <Link url="https://darekkay.com" className="text-nowrap">
+          Darek Kay
+        </Link>
+      </div>
+      <div className="text-center">
+        <span>Fork me on </span>
+        <Link url="https://github.com/darekkay/app-and-play">GitHub</Link>
+      </div>
+    </footer>
   </div>
 );
 

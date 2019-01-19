@@ -14,7 +14,8 @@ This is a collection of apps used to complement your board games. Those are most
 npm install
 ```
 
-2. Start app:
+2. Create `/.env` file based on the `/.env.example` file.
+3. Start app:
 
 ```bash
 npm run start
