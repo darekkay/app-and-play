@@ -20,7 +20,6 @@
     "react-scripts": "2.1.5"
   },
   "devDependencies": {
-    "cross-env": "5.2.0",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.10.0",
     "eslint-config-prettier": "4.1.0",
@@ -53,11 +52,11 @@
   "scripts": {
     "build": "react-scripts build",
     "ci": "npm run lint:check && npm run test",
-    "format": "prettier --write -- \"{src,public}/**/*.{js,jsx,json,css}\"",
+    "format": "prettier --write -- \"{src,public}/**/*.{js,jsx,json,css,scss}\"",
     "generate": "plop --plopfile internals/generators/index.js",
     "lint:check": "eslint src/**/*.js",
     "lint:fix": "eslint --fix src/**/*.js",
     "start": "react-scripts start",
-    "test": "cross-env CI=true react-scripts test --env=jsdom --modulePaths=src --coverage"
+    "test": "react-scripts test --modulePaths=src --coverage"
   }
 }
