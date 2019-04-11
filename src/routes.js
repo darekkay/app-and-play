@@ -1,6 +1,7 @@
 import Onitama from "./onitama/App";
-import TheMind from "./themind/App";
 import Tapple from "./tapple/App";
+import TheMind from "./themind/App";
+import Words from "./words/App";
 
 const routes = [
   {
@@ -9,14 +10,19 @@ const routes = [
     component: Onitama
   },
   {
+    path: "/tapple",
+    text: "Tapple",
+    component: Tapple
+  },
+  {
     path: "/themind",
     text: "The Mind",
     component: TheMind
   },
   {
-    path: "/tapple",
-    text: "Tapple",
-    component: Tapple
+    path: "/words",
+    text: "Words",
+    component: Words
   }
 ];
 

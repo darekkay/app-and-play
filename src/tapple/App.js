@@ -3,7 +3,7 @@ import { Game } from "boardgame.io/core";
 import _ from "lodash";
 
 import Board from "./components/Board";
-import categories from "./categories";
+import categories from "./data/categories";
 
 /* Prepare all alphabet letters except Q, X, Y*/
 const prepareLetters = _.map(
