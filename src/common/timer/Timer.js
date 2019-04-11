@@ -20,6 +20,8 @@ class Timer extends PureComponent {
       this.start();
     } else if (!prevProps.restart && this.props.restart) {
       this.restart();
+    } else if (prevProps.active && !this.props.active) {
+      this.stop();
     }
   }
 
