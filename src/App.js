@@ -12,26 +12,30 @@ import "./App.scss";
 
 const Index = () => (
   <div className="index">
-    <h1 className="headline">App and Play</h1>
-    <p>
-      This is a collection of apps used to complement your board games. Those
-      are mostly <strong>not</strong> standalone games and you will need to buy
-      the original game to be able to play it.
-    </p>
-    <p className="version text-center">
-      <strong>Version:</strong> {process.env.REACT_APP_VERSION}
-    </p>
-    <nav className="game-selection">
-      {routes.map(route => (
-        <div
-          key={route.path}
-          className={`nav-item nav-${route.path.substring(1)}`}
-        >
-          <RouteLink to={route.path}>{route.text}</RouteLink>
-        </div>
-      ))}
-    </nav>
-    <footer className="d-flex justify-content-around">
+    <header className="inverted">
+      <h1 className="headline">App and Play</h1>
+    </header>
+    <main>
+      <p>
+        This is a collection of apps used to complement your board games. Those
+        are mostly <strong>not</strong> standalone games and you will need to
+        buy the original game to be able to play it.
+      </p>
+      <p className="version text-center">
+        <strong>Version:</strong> {process.env.REACT_APP_VERSION}
+      </p>
+      <nav className="game-selection">
+        {routes.map(route => (
+          <div
+            key={route.path}
+            className={`nav-item nav-${route.path.substring(1)}`}
+          >
+            <RouteLink to={route.path}>{route.text}</RouteLink>
+          </div>
+        ))}
+      </nav>
+    </main>
+    <footer className="inverted d-flex justify-content-around">
       <div className="text-center">
         <span>Handmade with &hearts; by </span>
         <Link url="https://darekkay.com" className="text-nowrap">
@@ -48,19 +52,17 @@ const Index = () => (
 
 const App = () => (
   <Router>
-    <main>
-      <Route exact path="/" component={Index} />
-      <section>
-        {routes.map(route => (
-          <Route
-            key={route.path}
-            exact
-            path={route.path}
-            component={route.component}
-          />
-        ))}
-      </section>
-    </main>
+    <Route exact path="/" component={Index} />
+    <section>
+      {routes.map(route => (
+        <Route
+          key={route.path}
+          exact
+          path={route.path}
+          component={route.component}
+        />
+      ))}
+    </section>
   </Router>
 );
 

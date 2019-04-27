@@ -1,5 +1,59 @@
-body {
-  margin: 0 auto;
-  padding: 2rem 2.5rem;
-  /* TODO: set per game app */
+html,
+body,
+#root,
+.index {
+  height: 100%;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 1rem 2.5rem;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+footer {
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+
+footer > * {
+  margin: 0.6rem;
+}
+
+.inverted {
+  background: #202020;
+  color: #fff;
+}
+
+.inverted a,
+.inverted a:hover,
+.inverted a:visited {
+  color: #ff9e07;
+}
+
+.board {
+  padding: 1rem;
 }
