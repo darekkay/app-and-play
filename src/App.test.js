@@ -7,6 +7,6 @@ describe("<App>", () => {
   let wrapper = shallow(<App />);
 
   it("renders without error", () => {
-    expect(wrapper.find("main")).toHaveLength(1);
+    expect(wrapper.find("section")).toHaveLength(1);
   });
 });

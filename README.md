@@ -25,3 +25,9 @@ npm run start
 - [Onitama](https://boardgamegeek.com/boardgame/160477/onitama)
 - [The Mind](https://boardgamegeek.com/boardgame/244992/mind)
 - [Tapple](https://boardgamegeek.com/boardgame/129556/tapple)
+
+## License
+
+Copyright 2019 Darek Kay <hello@darekkay.com>  
+
+This project and its contents are open source under the [MIT license](LICENSE).
