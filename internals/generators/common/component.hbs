@@ -4,13 +4,12 @@ import cn from "classnames";
 
 import "./{{ properCase name }}.scss";
 
-const {{ properCase name }} = ({ className, ...rest }) => (
+const {{ properCase name }} = ({ className }) => (
   <div
     className={cn(
       "{{ lowerCase name }}",
       className
     )}
-    {...rest}
   ></div>
 );
 

@@ -1,28 +1,32 @@
-import Onitama from "./onitama/App";
-import Tapple from "./tapple/App";
-import TheMind from "./themind/App";
-import Words from "./words/App";
+/* istanbul ignore file */
+
+import React from "react";
+
+const Onitama = React.lazy(() => import("./onitama/App"));
+const Tapple = React.lazy(() => import("./tapple/App"));
+const TheMind = React.lazy(() => import("./themind/App"));
+const Words = React.lazy(() => import("./words/App"));
 
 const routes = [
   {
     path: "/onitama",
     text: "Onitama",
-    component: Onitama
+    component: <Onitama />
   },
   {
     path: "/tapple",
     text: "Tapple",
-    component: Tapple
+    component: <Tapple />
   },
   {
     path: "/themind",
     text: "The Mind",
-    component: TheMind
+    component: <TheMind />
   },
   {
     path: "/words",
     text: "Words",
-    component: Words
+    component: <Words />
   }
 ];
 

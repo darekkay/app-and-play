@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Suspense } from "react";
 import {
   HashRouter as Router,
   Route,
   Link as RouteLink
 } from "react-router-dom";
 
+import Loading from "common/loading/Loading";
 import Link from "common/link/Link";
 
 import routes from "./routes";
@@ -59,7 +60,7 @@ const App = () => (
           key={route.path}
           exact
           path={route.path}
-          component={route.component}
+          render={() => <Suspense fallback={<Loading className="margin-top"/>}>{route.component}</Suspense>}
         />
       ))}
     </section>
