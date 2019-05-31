@@ -10,26 +10,26 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "boardgame.io": "0.31.4",
+    "boardgame.io": "0.31.6",
     "classnames": "2.2.6",
     "lodash": "4.17.11",
     "prop-types": "15.7.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-router-dom": "5.0.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "3.0.1"
   },
   "devDependencies": {
     "enzyme": "3.9.0",
-    "enzyme-adapter-react-16": "1.12.0",
-    "eslint-config-prettier": "4.1.0",
-    "eslint-plugin-import": "2.16.0",
+    "enzyme-adapter-react-16": "1.13.2",
+    "eslint-config-prettier": "4.3.0",
+    "eslint-plugin-import": "2.17.3",
     "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-prettier": "3.0.1",
-    "eslint-plugin-react": "7.12.4",
-    "node-sass": "4.11.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.13.0",
+    "node-sass": "4.12.0",
     "plop": "2.3.0",
-    "prettier": "1.16.4"
+    "prettier": "1.17.1"
   },
   "homepage": "https://darekkay.com/app-and-play/",
   "jest": {
