@@ -10,7 +10,7 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "boardgame.io": "0.31.6",
+    "boardgame.io": "0.31.7",
     "classnames": "2.2.6",
     "lodash": "4.17.11",
     "prop-types": "15.7.2",
