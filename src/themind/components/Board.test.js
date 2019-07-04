@@ -13,7 +13,7 @@ describe("<Board>", () => {
   beforeEach(() => {
     wrapper = shallow(
       <Board
-        G={{ levels, level: 1, lifes: 2, stars: 1 }}
+        G={{ levels, level: 1, lifes: 2, stars: 1, playerCount: 3 }}
         moves={{
           decLifes: jest.fn(),
           decStars: jest.fn(),

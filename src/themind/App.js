@@ -14,7 +14,13 @@ const bonus = level =>
   level < levels.length - 1 ? levels[level - 1].bonus : undefined;
 
 export const TheMind = Game({
-  setup: () => ({ levels, level: 1, lifes: 2, stars: 1 }),
+  setup: () => ({
+    levels,
+    level: 1,
+    lifes: 2,
+    stars: 1,
+    playerCount: undefined
+  }),
 
   moves: {
     incLevel: G => {
@@ -28,7 +34,12 @@ export const TheMind = Game({
       return nextLevel;
     },
     decLifes: G => decrement(G, "lifes", 0),
-    decStars: G => decrement(G, "stars", 0)
+    decStars: G => decrement(G, "stars", 0),
+    setPlayerCount: (G, ctx, playerCount) => ({
+      ...G,
+      playerCount,
+      lifes: playerCount
+    })
   }
 });
 

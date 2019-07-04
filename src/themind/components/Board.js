@@ -13,25 +13,51 @@ import RestartButton from "common/button/RestartButton";
 
 import "./Board.scss";
 
+const maxLevels = playerCount => ({ 2: 12, 3: 10, 4: 8 }[playerCount]);
+
 class Board extends React.Component {
   incLevel = () => {
     this.props.moves.incLevel();
   };
   decLifes = () => this.props.moves.decLifes();
   decStars = () => this.props.moves.decStars();
+  setPlayerCount = playerCount => () =>
+    this.props.moves.setPlayerCount(playerCount);
 
   render() {
-    const { levels, level, lifes, stars } = this.props.G;
+    const { levels, level, lifes, stars, playerCount } = this.props.G;
+
+    if (!playerCount) {
+      return (
+        <div className="board themind">
+          <h2>Number of Players</h2>
+          <div className="d-flex">
+            <Button className="margin-x" onClick={this.setPlayerCount(2)}>
+              2
+            </Button>
+            <Button className="margin-x" onClick={this.setPlayerCount(3)}>
+              3
+            </Button>
+            <Button className="margin-x" onClick={this.setPlayerCount(4)}>
+              4
+            </Button>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="board themind">
         <div className="marker-row">
           <div className="left">
-            <Button name="incLevel" onClick={this.incLevel}>
-              <Icon name="plus" />
-            </Button>
+            {level < maxLevels(playerCount) && lifes > 0 && (
+              <Button name="incLevel" onClick={this.incLevel}>
+                <Icon name="plus" />
+              </Button>
+            )}
           </div>
           <div className="middle levels">
-            {_.range(1, 13).map(index => (
+            {_.range(1, maxLevels(playerCount) + 1).map(index => (
               <Square
                 key={`level-${index}`}
                 className={cn({ "level-fill": index <= level })}
@@ -43,37 +69,46 @@ class Board extends React.Component {
                 {levels[index - 1].bonus === "star" && (
                   <Icon name="star" className="right-bottom" />
                 )}
-                {index === 8 && <div className="player-count">IV</div>}
-                {index === 10 && <div className="player-count">III</div>}
-                {index === 12 && <div className="player-count">II</div>}
               </Square>
             ))}
           </div>
         </div>
-
         <div className="marker-row">
           <div className="left">
-            <Button type="secondary" name="decLifes" onClick={this.decLifes}>
-              <Icon name="minus" />
-            </Button>
+            {lifes > 0 && (
+              <Button type="secondary" name="decLifes" onClick={this.decLifes}>
+                <Icon name="minus" />
+              </Button>
+            )}
           </div>
           <div className="middle lifes">
-            {_.range(1, 6).map(index => (
-              <Square key={`life-${index}`}>
-                <Icon
-                  name="heart"
-                  className={cn({ "icon-disabled": index > lifes })}
-                />
-              </Square>
-            ))}
+            {lifes === 0 && (
+              <h2 className="text-center">
+                Game Over{" "}
+                <span role="img" aria-label="Sad Emoji">
+                  😔
+                </span>
+              </h2>
+            )}
+
+            {lifes > 0 &&
+              _.range(1, 6).map(index => (
+                <Square key={`life-${index}`}>
+                  <Icon
+                    name="heart"
+                    className={cn({ "icon-disabled": index > lifes })}
+                  />
+                </Square>
+              ))}
           </div>
         </div>
-
         <div className="marker-row">
           <div className="left">
-            <Button type="secondary" name="decStars" onClick={this.decStars}>
-              <Icon name="minus" />
-            </Button>
+            {stars > 0 && lifes > 0 && (
+              <Button type="secondary" name="decStars" onClick={this.decStars}>
+                <Icon name="minus" />
+              </Button>
+            )}
           </div>
           <div className="middle stars">
             {_.range(1, 4).map(index => (
@@ -86,7 +121,6 @@ class Board extends React.Component {
             ))}
           </div>
         </div>
-
         <Menu>
           <UndoButton {...this.props} />
           <div className="separator" />

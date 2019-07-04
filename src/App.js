@@ -60,7 +60,11 @@ const App = () => (
           key={route.path}
           exact
           path={route.path}
-          render={() => <Suspense fallback={<Loading className="margin-top"/>}>{route.component}</Suspense>}
+          render={() => (
+            <Suspense fallback={<Loading className="margin-top" />}>
+              {route.component}
+            </Suspense>
+          )}
         />
       ))}
     </section>
