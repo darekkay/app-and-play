@@ -1,11 +1,10 @@
 import { Client } from "boardgame.io/react";
-import { Game } from "boardgame.io/core";
 import _ from "lodash";
 
 import Board from "./components/Board";
 import deck from "./deck";
 
-export const Onitama = Game({
+export const Onitama = {
   setup: () => ({ cards: _.take(_.shuffle(deck), 5) }),
 
   moves: {
@@ -17,7 +16,7 @@ export const Onitama = Game({
       return { ...G, cards };
     }
   }
-});
+};
 
 const App = Client({
   game: Onitama,

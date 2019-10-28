@@ -1,12 +1,11 @@
 import { Client } from "boardgame.io/react";
-import { Game } from "boardgame.io/core";
 import _ from "lodash";
 
 import Board from "./components/Board";
 
 import wordLists from "./data";
 
-export const Words = Game({
+export const Words = {
   setup: () => ({
     word: "..."
   }),
@@ -19,7 +18,7 @@ export const Words = Game({
       };
     }
   }
-});
+};
 
 const App = Client({
   game: Words,

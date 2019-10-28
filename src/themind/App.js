@@ -1,5 +1,4 @@
 import { Client } from "boardgame.io/react";
-import { Game } from "boardgame.io/core";
 
 import Board from "./components/Board";
 import levels from "./levels";
@@ -13,7 +12,7 @@ const decrement = (G, value, minValue) =>
 const bonus = level =>
   level < levels.length - 1 ? levels[level - 1].bonus : undefined;
 
-export const TheMind = Game({
+export const TheMind = {
   setup: () => ({
     levels,
     level: 1,
@@ -41,7 +40,7 @@ export const TheMind = Game({
       lifes: playerCount
     })
   }
-});
+};
 
 const App = Client({
   game: TheMind,

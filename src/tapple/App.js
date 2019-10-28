@@ -1,5 +1,4 @@
 import { Client } from "boardgame.io/react";
-import { Game } from "boardgame.io/core";
 import _ from "lodash";
 
 import Board from "./components/Board";
@@ -21,7 +20,7 @@ const setup = () => ({
   timerActive: false
 });
 
-export const Tapple = Game({
+export const Tapple = {
   setup: setup,
   moves: {
     pressLetter(G, ctx, letter) {
@@ -48,7 +47,7 @@ export const Tapple = Game({
       return setup();
     }
   }
-});
+};
 
 const App = Client({
   game: Tapple,
