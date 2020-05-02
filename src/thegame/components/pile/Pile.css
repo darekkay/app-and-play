@@ -1,0 +1,9 @@
+.pile {
+  display: flex;
+  align-items: center;
+}
+
+.ten-rule-out {
+  border-bottom: 2px solid red;
+  padding-top: 1px;
+}

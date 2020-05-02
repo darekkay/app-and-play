@@ -1,0 +1,27 @@
+.card {
+  height: 80px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+
+  background-color: #fff;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+
+  cursor: default;
+}
+
+.card-selected {
+  border: 2px solid #006aff;
+}
+
+.card-selectable {
+  cursor: pointer;
+}
+
+.card-disabled {
+  color: #ddd;
+}
