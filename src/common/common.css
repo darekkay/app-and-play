@@ -25,7 +25,7 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2.5rem 1rem;
+  padding: 4rem 1rem;
 }
 
 header h1 {
@@ -44,14 +44,14 @@ footer > * {
 }
 
 .inverted {
-  background: #202020;
+  background: #233c51;
   color: #fff;
 }
 
 .inverted a,
 .inverted a:hover,
 .inverted a:visited {
-  color: #ff9e07;
+  color: #face00;
 }
 
 .board {
