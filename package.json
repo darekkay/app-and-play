@@ -40,7 +40,10 @@
         "functions": 80,
         "lines": 80
       }
-    }
+    },
+    "coveragePathIgnorePatterns" : [
+      "<rootDir>/src/thegame/"
+    ]
   },
   "license": "MIT",
   "main": "src/index.js",
