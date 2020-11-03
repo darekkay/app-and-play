@@ -1,6 +1,6 @@
 # App and Play
 
-[![Travis](https://img.shields.io/travis/com/darekkay/app-and-play.svg?style=flat-square)](https://travis-ci.com/darekkay/app-and-play)
+[![Build](https://img.shields.io/github/workflow/status/darekkay/app-and-play/Continuous%20Integration?style=flat-square)](https://github.com/darekkay/app-and-play/actions)
 [![license](https://img.shields.io/github/license/darekkay/app-and-play.svg?style=flat-square)](https://github.com/darekkay/app-and-play/blob/master/LICENSE)
 
 This is a collection of apps used to complement your board games. Those are mostly **not** standalone games, and you will need to buy the original game to be able to play it.
