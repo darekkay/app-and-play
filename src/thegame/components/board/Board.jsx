@@ -3,7 +3,7 @@ import React, { PureComponent } from "react";
 import Pile from "../pile/Pile";
 import Icon from "../icon/Icon";
 
-import "./Board.css";
+import "./Board.scss";
 
 class Board extends PureComponent {
   renderPile = key => (

@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 
-import "./Icon.css";
+import "./Icon.scss";
 
 class Icon extends PureComponent {
   renderSVG() {

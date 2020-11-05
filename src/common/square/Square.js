@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import cl from "classnames";
 
-import "./Square.css";
+import "./Square.scss";
 
 class Square extends PureComponent {
   render() {

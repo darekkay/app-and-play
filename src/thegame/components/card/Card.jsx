@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import cl from "classnames";
 
-import "./Card.css";
+import "./Card.scss";
 
 class Card extends PureComponent {
   onClick = () => {

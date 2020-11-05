@@ -4,7 +4,7 @@ import cl from "classnames";
 import Card from "../card/Card";
 import Icon from "../icon/Icon";
 
-import "./Pile.css";
+import "./Pile.scss";
 
 class Pile extends PureComponent {
   onClick = () => {

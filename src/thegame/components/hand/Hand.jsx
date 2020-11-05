@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 
 import Card from "../card/Card";
 
-import "./Hand.css";
+import "./Hand.scss";
 
 class Hand extends PureComponent {
   render() {
