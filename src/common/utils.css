@@ -20,9 +20,17 @@
   margin-top: 2rem;
 }
 
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
 .margin-x {
   margin-right: 2rem;
   margin-left: 2rem;
+}
+
+.text-bold {
+  font-weight: bold;
 }
 
 /* Flex */
@@ -31,6 +39,14 @@
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .justify-content-around {
   justify-content: space-around;
+}
+
+.justify-content-center {
+  justify-content: center;
 }

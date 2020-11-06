@@ -36,14 +36,6 @@
   },
   "homepage": "https://darekkay.com/app-and-play/",
   "jest": {
-    "coverageThreshold": {
-      "src/**/*.js": {
-        "statements": 80,
-        "branches": 80,
-        "functions": 80,
-        "lines": 80
-      }
-    },
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/thegame/"
     ]
